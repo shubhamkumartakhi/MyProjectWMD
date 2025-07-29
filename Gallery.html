@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="style.css">
     <style>
         body {
             background: #f4f6fb;
@@ -58,6 +58,44 @@
             font-weight: 600;
             border-top: 1px solid #e3f2fd;
         }
+        /* Footer Section Styles*/
+    footer {
+        margin-top:350px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .social-icons {
+            margin: 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 6px;
+            transition: transform 0.2s;
+        }
+        .social-icons img {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .social-icons a:hover img {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            transform: scale(1.1);
+        }
         @media (max-width: 700px) {
             .gallery-container { width: 98%; }
             .gallery-img { height: 150px; }
@@ -81,12 +119,12 @@
       <!-- Navigation Menu -->
    <div class="menu" id="menu">
      <a href="About.html">About</a>
-     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Macky.html">Macky Label</a>
      <a href="Brands.html">Brands</a>
      <a href="Gallery.html">Gallery</a>
-     <a href="Testimonials.html">Testimonial</a>
+     <a href="Testimonial.html">Testimonial</a>
      <a href="Blogs.html">Blogs</a>
-     <a href="ContactUs.html">Contact Us</a>
+     <a href="Contact.html">Contact Us</a>
     </div>
   </div>
   </div>
@@ -127,6 +165,23 @@
             </div>
         </div>
     </div>
+    <!--Footer Section-->
+   <footer>
+        <div class="footer-content">
+            <p style="margin:0;">© 2025 MackySportsApparel. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/MackySportsApparel&quot; target="_blank" aria-label="Facebook">
+                    <img src="Images/fbicon.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/MackySportsApparel&quot; target="_blank" aria-label="Twitter">
+                    <img src="Images/twittericon.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/MackySportsApparel&quot; target="_blank" aria-label="Instagram">
+                    <img src="Images/instagramicon.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
     <script>	
 function toggleMenu() {
       const menu = document.getElementById('menu');
