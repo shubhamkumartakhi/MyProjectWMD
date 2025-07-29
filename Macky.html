@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macky Sports Label</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+        .section {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(44,62,80,0.13);
+            padding: 44px 32px;
+            margin-bottom: 38px;
+        }
+        .section-title {
+            font-size: 2.1rem;
+            color: #1976d2;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .section-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .unique-row {
+            display: flex;
+            gap: 32px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+        .unique-box {
+            flex: 1 1 260px;
+            background: linear-gradient(120deg, #e3f2fd 60%, #f8fafc 100%);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(25,118,210,0.09);
+            padding: 28px 22px;
+            min-width: 220px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .unique-title {
+            font-size: 1.18rem;
+            color: #1976d2;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .future-section {
+            background: linear-gradient(120deg, #f8fafc 60%, #e3f2fd 100%);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+            padding: 44px 32px;
+            margin-bottom: 38px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .future-text {
+            flex: 2;
+            font-size: 1.13rem;
+            color: #333;
+        }
+        .future-img {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .future-img img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(25,118,210,0.13);
+        }
+        @media (max-width: 900px) {
+            .container { width: 95%; }
+            .unique-row, .future-section { flex-direction: column; gap: 20px; }
+            .future-img img { max-width: 90vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <div class="container">
+        <!-- Macky Sports Label Section -->
+        <section class="section">
+            <div class="section-title">Macky Sports Label</div>
+            <div class="section-text">
+                Macky Sports Label stands as a beacon of innovation and excellence in the world of athletic apparel. Our journey began with a vision to redefine sportswear by merging advanced technology, modern aesthetics, and a deep understanding of athletes’ needs. Every piece in our collection is crafted with precision, ensuring not only superior performance but also unmatched comfort and style. We believe that sportswear should empower individuals to push their boundaries, whether on the field, in the gym, or during everyday activities. Our commitment to sustainability drives us to use eco-friendly materials and responsible manufacturing processes, minimizing our environmental footprint. At Macky, we celebrate diversity and inclusivity, designing apparel for all body types and athletic levels. Our relentless pursuit of quality and innovation has earned us the trust of athletes and fitness enthusiasts worldwide. Join the Macky movement and experience sportswear that’s engineered for greatness, inspired by passion, and designed for you.
+            </div>
+        </section>
+
+        <!-- Why Make Macky Label Unique? Section -->
+        <section class="section">
+            <div class="section-title">Why Make Macky Label Unique?</div>
+            <div class="unique-row">
+                <div class="unique-box">
+                    <div class="unique-title">Innovative Fabrics</div>
+                    <div>
+                        We use cutting-edge, moisture-wicking, and breathable fabrics that adapt to your body’s needs. Our materials are lightweight, durable, and eco-friendly, ensuring you stay comfortable and dry during every workout or competition.
+                    </div>
+                </div>
+                <div class="unique-box">
+                    <div class="unique-title">Signature Design</div>
+                    <div>
+                        Macky’s signature designs blend modern trends with timeless athletic style. Each piece is engineered for a perfect fit, offering freedom of movement and a look that stands out both on and off the field.
+                    </div>
+                </div>
+                <div class="unique-box">
+                    <div class="unique-title">Our Philosophy</div>
+                    <div>
+                        We believe sportswear is more than clothing—it’s a mindset. Our philosophy centers on empowering individuals to achieve their best, fostering confidence, and building a community united by passion and performance.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Future of Macky Section -->
+        <section class="future-section">
+            <div class="future-text">
+                <div class="section-title" style="margin-bottom:12px;">The Future of Macky</div>
+                At Macky Sports Label, we are constantly evolving. Our vision for the future includes integrating smart technology into our apparel, expanding our sustainable initiatives, and collaborating with athletes to co-create next-generation sportswear. We are dedicated to pushing boundaries, embracing innovation, and inspiring the next wave of champions. With Macky, the future of sportswear is bright, bold, and limitless.
+            </div>
+            <div class="future-img">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Future of Macky Sports">
+            </div>
+        </section>
+    </div>
+    <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+        .blog-container {
+            width: 85%;
+            margin: 40px auto;
+        }
+        .blog-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #000;
+            font-weight: 700;
+            margin-bottom: 38px;
+            letter-spacing: 1px;
+        }
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(25,118,210,0.13);
+        }
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .blog-content {
+            padding: 22px 18px 20px 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .blog-block-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+        }
+        .blog-text {
+            font-size: 1.05rem;
+            color: #000;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+        .more-btn {
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .more-btn:hover {
+            background: linear-gradient(90deg, #1976d2 0%, #43e97b 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .blog-container { width: 98%; }
+            .blog-img { height: 130px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <div class="blog-container">
+        <div class="blog-title">Blogs</div>
+        <div class="blogs-grid">
+            <div class="blog-card">
+                <img class="blog-img" src="Images/Sportbottle.jpg" alt="Sports Water Bottle">
+                <div class="blog-content">
+                    <div class="blog-block-title">Choosing the Right Sports Water Bottle</div>
+                    <div class="blog-text">
+                        Hydration is key for every athlete. Learn how to pick the perfect sports water bottle for your needs, from insulated designs to lightweight options for running and cycling.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-img" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Fitness Tracker">
+                <div class="blog-content">
+                    <div class="blog-block-title">Top Fitness Trackers for 2025</div>
+                    <div class="blog-text">
+                        Track your progress and stay motivated with the latest fitness trackers. We review the best models for accuracy, comfort, and smart features to boost your training.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Sports Headphones">
+                <div class="blog-content">
+                    <div class="blog-block-title">Best Wireless Headphones for Sports</div>
+                    <div class="blog-text">
+                        Music can power your workout! Discover the top wireless headphones designed for athletes, offering sweat resistance, secure fit, and long battery life.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-img" src="Images/Mat.jpeg" alt="Yoga Mat">
+                <div class="blog-content">
+                    <div class="blog-block-title">How to Select a Quality Yoga Mat</div>
+                    <div class="blog-text">
+                        Your yoga mat matters! We guide you through the best materials, thickness, and grip to ensure comfort and stability during every pose and practice.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-img" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Sports Shoes">
+                <div class="blog-content">
+                    <div class="blog-block-title">Sports Shoes: Finding the Perfect Fit</div>
+                    <div class="blog-text">
+                        The right shoes can prevent injuries and boost performance. Explore our tips for choosing sports shoes tailored to your activity and foot type.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-img" src="Images/dufflebag.jpg" alt="Gym Bag">
+                <div class="blog-content">
+                    <div class="blog-block-title">Must-Have Gym Bags for Every Athlete</div>
+                    <div class="blog-text">
+                        Stay organized and stylish with our top picks for gym bags. Find out which features matter most for carrying your gear to the gym or the field.
+                    </div>
+                    <button class="more-btn">More...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
+</body>
+</html>

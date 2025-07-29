@@ -4,28 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .gallery-container {
+            width: 85%;
+            margin: 40px auto;
+        }
+        .gallery-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #000000;
+            font-weight: 700;
+            margin-bottom: 36px;
+            letter-spacing: 1px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(25,118,210,0.13);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 16px 12px;
+            font-size: 1.08rem;
+            color: #000; /* Changed to black */
+            text-align: center;
+            background: #f8fafc;
+            font-weight: 600;
+            border-top: 1px solid #e3f2fd;
+        }
+        @media (max-width: 700px) {
+            .gallery-container { width: 98%; }
+            .gallery-img { height: 150px; }
+        }
+    </style>
 </head>
 <body>
-        </br>
-        </br>
-        <a href="HomePage">Home</a>
-        </br>
-        </br>
-        <a href="About.html">About</a>
-        </br>
-         </br>
-        </br>
-        <a href="Gallery.html">Gallery</a>
-        </br>
-         </br>
-        </br>
-        <a href="Products.html">Product</a>
-        </br>
-         </br>
-        </br>
-        <a href="Services.html">Service</a>
-        </br>
-        </br>
-         <h1>Gallery</h1>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <div class="gallery-container">
+        <div class="gallery-title">Gallery</div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Running Athlete">
+                <div class="gallery-caption">Running for Endurance</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Yoga Pose">
+                <div class="gallery-caption">Morning Yoga Flow</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Football Game">
+                <div class="gallery-caption">Football Action</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="Images/yogasession.jpg" alt="Yoga Meditation">
+                <div class="gallery-caption">Yoga & Meditation</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Basketball">
+                <div class="gallery-caption">Basketball Moments</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="Yoga Stretch">
+                <div class="gallery-caption">Yoga Stretch</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Cycling">
+                <div class="gallery-caption">Cycling Adventure</div>
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-img" src="Images/yoga.jpg" alt="Group Yoga">
+                <div class="gallery-caption">Group Yoga Session</div>
+            </div>
+        </div>
+    </div>
+    <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
 </body>
 </html>

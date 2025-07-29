@@ -3,26 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Macky Sports Apparel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+        .section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+            padding: 40px 32px;
+            margin-bottom: 36px;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #1976d2;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .section-text {
+            font-size: 1.13rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .values-row {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .value-box {
+            flex: 1 1 260px;
+            background: linear-gradient(120deg, #e3f2fd 60%, #f8fafc 100%);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(25,118,210,0.09);
+            padding: 28px 22px;
+            min-width: 220px;
+            margin-bottom: 16px;
+        }
+        .value-title {
+            font-size: 1.2rem;
+            color: #1976d2;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .why-choose {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .why-text {
+            flex: 2;
+        }
+        .why-img {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .why-img img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(25,118,210,0.13);
+        }
+        @media (max-width: 900px) {
+            .container { width: 95%; }
+            .values-row, .why-choose { flex-direction: column; gap: 20px; }
+            .why-img img { max-width: 90vw; }
+        }
+    </style>
 </head>
 <body>
-        </br>
-        </br>
-        <a href="About.html">About</a>
-        </br>
-         </br>
-        </br>
-        <a href="Gallery.html">Gallery</a>
-        </br>
-         </br>
-        </br>
-        <a href="Products.html">Product</a>
-        </br>
-         </br>
-        </br>
-        <a href="Services.html">Service</a>
-        </br>
-        </br>
-         <h1>About</h1>
-</body>
-</html>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <div class="container">
+        <!-- About Section -->
+        <section class="section">
+            <div class="section-title">About Macky Sports Apparel</div>
+            <div class="section-text">
+                Macky Sports Apparel is dedicated to empowering athletes and fitness enthusiasts with high-performance, stylish, and comfortable sportswear. Founded with a passion for sports and innovation, we blend advanced fabric technology with modern design to create apparel that supports every movement. Our team is committed to quality, ensuring each product undergoes rigorous testing for durability and comfort. At Macky, we believe that the right gear can inspire confidence and elevate performance, whether you’re training for a marathon or enjoying a casual workout. Our collections are designed for all ages and skill levels, reflecting our belief in inclusivity and the power of sport to unite communities. Sustainability is at the heart of our process, as we strive to minimize our environmental impact through responsible sourcing and production. Join the Macky Sports Apparel family and experience the difference that dedication, innovation, and passion can make in your athletic journey.
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="section">
+            <div class="section-title">Our Mission</div>
+            <div class="section-text">
+                Our mission is to inspire and empower individuals to reach their full athletic potential by providing innovative, high-quality sports apparel. We are committed to supporting every athlete’s journey with gear that enhances performance, promotes confidence, and encourages a healthy, active lifestyle.
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="section">
+            <div class="section-title">Our Values</div>
+            <div class="values-row">
+                <div class="value-box">
+                    <div class="value-title">Quality</div>
+                    <div>
+                        We prioritize exceptional craftsmanship and premium materials in every product. Our commitment to quality ensures that our apparel stands up to the demands of intense training and everyday wear, delivering comfort and durability you can trust.
+                    </div>
+                </div>
+                <div class="value-box">
+                    <div class="value-title">Performance</div>
+                    <div>
+                        Our designs are engineered for optimal performance, blending advanced technology with ergonomic fits. We help athletes push boundaries and achieve their goals by offering gear that moves with them and supports their ambitions.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section">
+            <div class="section-title">Why Choose Us?</div>
+            <div class="why-choose">
+                <div class="why-text section-text">
+                    <ul style="padding-left: 20px; margin: 0;">
+                        <li>Cutting-edge designs that combine style and function</li>
+                        <li>Commitment to sustainability and ethical production</li>
+                        <li>Rigorous quality control for lasting durability</li>
+                        <li>Inclusive collections for all ages and abilities</li>
+                        <li>Exceptional customer service and support</li>
+                        <li>Trusted by athletes and fitness enthusiasts worldwide</li>
+                    </ul>
+                </div>
+                <div class="why-img">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80" alt="Athlete in Macky Sports Apparel">
+                </div>
+                </div>
+                </section>
+                </div>
+                <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
+                </body>
+                
+                </html>

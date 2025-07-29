@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Brands</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #1976d2;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .section-text {
+            font-size: 1.13rem;
+            line-height: 1.7;
+            color: #444;
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .brands-row {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .brand-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+            padding: 28px 22px 22px 22px;
+            min-width: 260px;
+            max-width: 300px;
+            flex: 1 1 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .brand-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(25,118,210,0.13);
+        }
+        .brand-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            background: #f8fafc;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        .brand-name {
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: #1976d2;
+            margin-bottom: 8px;
+        }
+        .product-title {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .product-desc {
+            font-size: 0.98rem;
+            color: #555;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .buy-btn {
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .buy-btn:hover {
+            background: linear-gradient(90deg, #1976d2 0%, #43e97b 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 900px) {
+            .container { width: 95%; }
+            .brands-row { flex-direction: column; gap: 20px; }
+            .brand-card { max-width: 95vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <div class="container">
+        <div class="section-title">Our Brands</div>
+        <div class="section-text">
+            Discover our curated selection of top sports brands, each renowned for quality, innovation, and performance. We bring you the best from Nike, Adidas, and Decathlon, offering products that blend style and technology to elevate your athletic experience. Shop with confidence and find the perfect gear for your fitness journey.
+        </div>
+        <div class="brands-row">
+            <!-- Nike Card -->
+            <div class="brand-card">
+                <img class="brand-img" src="Images/Nike.png" alt="Nike Air Zoom Pegasus 40">
+                <div class="brand-name">Nike</div>
+                <div class="product-title">Air Zoom Pegasus 40</div>
+                <div class="product-desc">
+                    Experience responsive cushioning and lightweight support with Nike's latest running innovation. Perfect for daily runs and high-performance training.
+                </div>
+                <div style="font-size:1.1rem;font-weight:600;color:#43e97b;margin-bottom:12px;">$149</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <!-- Adidas Card -->
+            <div class="brand-card">
+                <img class="brand-img" src="Images/Adidas.png" alt="Adidas Ultraboost Light">
+                <div class="brand-name">Adidas</div>
+                <div class="product-title">Ultraboost Light</div>
+                <div class="product-desc">
+                    Step into comfort and energy return with Adidas Ultraboost. Designed for runners who demand both style and performance in every stride.
+                </div>
+                <div style="font-size:1.1rem;font-weight:600;color:#43e97b;margin-bottom:12px;">$179</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <!-- Decathlon Card -->
+            <div class="brand-card">
+                <img class="brand-img" src="Images/Decathlon.png" alt="Decathlon Kalenji Run 500 Light">
+                <div class="brand-name">Decathlon</div>
+                <div class="product-title">Kalenji Run 500 Light</div>
+                <div class="product-desc">
+                    Lightweight, breathable, and built for comfort, the Kalenji Run 500 Light is ideal for everyday training and long-distance runs at any level.
+                </div>
+                <div style="font-size:1.1rem;font-weight:600;color:#43e97b;margin-bottom:12px;">$59</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
+</body>
+</html>

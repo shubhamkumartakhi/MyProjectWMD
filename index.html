@@ -4,41 +4,642 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+/*Header Menu*/
+#menu {
+  color: white;
+}
+/* Banner */
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-image: url('4.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      transition: margin-top 0.3s;
+    }
+
+    .banner h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 2.5rem;
+    }
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    text-align: center;
+}
+
+#section1 {
+    color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#section1 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#section1 p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feature {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(247, 247, 247, 0.848);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.12);
+}
+
+footer {
+    margin-top:350px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 200px;
+      }
+
+      .banner h1 {
+        font-size: 1.5rem;
+      }
+    }
+    /*Feature Section Styles*/
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f8fb;
+        text-align: center;
+    }
+
+    .header2 {
+        color: black; /*text color*/
+        padding: 50px 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header2 h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .header2 p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .learnmore {
+        padding: 10px 20px;
+        font-size:larger;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .viewcollection {
+        padding: 10px 20px;
+        font-size:larger;
+        background-color: #0a9f14;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .action-button:hover {
+        background-color: #0056b3;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .feature {
+        margin: 10px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .featurescollection {
+        padding: 10px 20px;
+        font-size:larger;
+        background-color: #0a9f14;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    /* Footer Section Styles*/
+    footer {
+        margin-top:350px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .social-icons {
+            margin: 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 6px;
+            transition: transform 0.2s;
+        }
+        .social-icons img {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .social-icons a:hover img {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    /* Popular Products Section */
+    .popular-products {
+        padding: 40px 0 20px 0;
+        background: #f8fafc;
+    }
+    .popular-products h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #222;
+    }
+    .product-cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .product-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 20px;
+        width: 260px;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   .product-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .product-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .product-card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 1.2rem;
+        color: #222;
+    }
+    .product-card p {
+        font-size: 0.98rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+    .product-card .price {
+        font-weight: bold;
+        color: #0a9f14;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    .add-cart-btn {
+        background: #212121;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .add-cart-btn:hover {
+        background:  #E67514 ;
+    }
+    @media (max-width: 900px) {
+        .product-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .box{
+        background-color: #c7ced3;
+     
+    }
+
+    /* Testimonials Section Styles*/
+    .testimonials {
+    background: #f8fafc;
+    padding: 40px 0 30px 0;
+    text-align: center;
+    }
+    .testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #222;
+    }
+    .testimonial-cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .testimonial-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 25px 20px 20px 20px;
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .testimonial-card img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 2px solid #0a9f14;
+    }
+    .testimonial-text {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 12px;
+        font-style: italic;
+    }
+    .testimonial-name {
+        font-weight: bold;
+        color: #0a9f14;
+        font-size: 1.05rem;
+    }
+    @media (max-width: 900px) {
+        .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+    /* Subscribe Section Styles */
+
+    .subscribe-section {
+        background: #c7ced3;
+        padding: 35px 20px 30px 20px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        margin-top: 0;
+    }
+    .subscribe-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: #0a9f14;
+    }
+    .subscribe-section p {
+        color: #444;
+        margin-bottom: 18px;
+        font-size: 1rem;
+    }
+     .subscription {
+        padding: 10px 20px;
+        font-size:larger;
+        background-color: #0a9f14;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .subscribe-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .subscribe-form input[type="email"] {
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 240px;
+        max-width: 90vw;
+        outline: none;
+        transition: border 0.2s;
+    }
+    .subscribe-form input[type="email"]:focus {
+        border: 1.5px solid #0a9f14;
+    }
+    .subscribe-form button {
+        padding: 10px 22px;
+        background: #ee7307;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .subscribe-form button:hover {
+        background: #007b55;
+    }
+    </style>
 </head>
 <body>
-    <!-- <h2>Birthday Invitation </h2>
-    <h3> My Birth is on Today</h3>
-    <img src="bdycake.jpg" width=400" height="400" border="8" alt="Birthday cake on candle">
-    <h3>What is Special in Birthday</h3>
-        <ul>
-            <li>Birthday cake</li>
-            <li>candle</li>
-            <li>Juice</li>
-            <li>Snacks</li>
-         </ul>
-         <a href="https://maps.app.goo.gl/PHAUYcW7LLtVdXi2A">google map link</a> -->
+   	
+<div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
 
 
-         <h1>Home page</h1>
-        </br>
-        <a href="HomePage">Home</a>
-        </br>
-        </br>
-        <a href="About.html">About</a>
-        </br>
-         </br>
-        </br>
-        <a href="Gallery.html">Gallery</a>
-        </br>
-         </br>
-        </br>
-        <a href="Products.html">Product</a>
-        </br>
-         </br>
-        </br>
-        <a href="Services.html">Service</a>
-        </br>
-        </br>
+<!-- Image Banner -->
+  <div class="banner" id="banner">
+    <h1>Gear Up. Move Forward</h1>
+  </div>
+   <!-- <Section id="section1">
+        <h1>Welcome to Our Service</h1>
+        <p>Discover the future of online experience.</p>
+        <button class="action-button">Learn More</button>
+   </Section>
+   <section class="features">
+        <div class="feature">
+            <h2>Feature One</h2>
+            <p>Description of Feature One.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature Two</h2>
+            <p>Description of Feature Two.</p>
+        </div>
+        More features -->
+    </section> 
+     <!--About Us-->
+    <div class="box">
+        <div class="header2">
+            <h1>About Us</h1>
+            <p>Premium sports apparel designed for athletes who demand excellence.
+                Experience the perfect blend of performance, style, and comfort.</p>
+            <button class="learnmore">Learn More</button>
+            <button class="viewcollection">View Collections</button>
+        </div>
+        <section class="features">
+        <div class="feature">
+            <h2>Pro Performance Jerseys</h2>
+            <br>
+            <br>
+            <p>
+            Take your game to the next level with the MackySportsApparel Pro Performance Jersey
+            - built for athletes who demand comfort, style, and durability.
+            <br>
+            <br>
+            <button class="featurescollection">See Collections</button>
+            </p>
+        </div>
+        <div class="feature">
+            <h2>Velocity Sports Shoes</h2>
+            <br>
+            <br>
+            <p>Step into peak performance with the MackySportsApparel Velocity Sports Shoes-
+                engineered for speed, support, and all-day comfort.
+                        <br>
+            <br>
+            <button class="featurescollection">See Collections</button>
+            </p>
+        </div>
+        <div class="feature">
+            <h2>Elite Sports Accessories</h2>
+            <br>
+            <br>
+            <p>Complete your athletic gear with the
+                MackySportsApparel Elite Sports Accessories Collection -
+                function and style.
+            <br>
+            <br>
+            <button class="featurescollection">See Collections</button>
+            </p>
+        </div>
+    </section>
+  </div>
+    <!-- Popular Products Section -->
+  <section class="popular-products">
+        <h2>Popular Products</h2>
+        <div class="product-cards">
+            <div class="product-card">
+                <img src="Images/tshirt.jpg" alt="tshirt">
+                <h3>Performance T-Shirt</h3>
+                <p>Lightweight, breathable, and perfect for workouts.</p>
+                <div class="price">$25.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Images/sportshoodie.jpg" alt="sportshoodie">
+                <h3>Sports Hoodie</h3>
+                <p>Stay warm and stylish with our premium hoodie.</p>
+                <div class="price">$40.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Images/runningshorts.jpg" alt="runningshorts">
+                <h3>Running Shorts</h3>
+                <p>Comfortable shorts designed for peak performance.</p>
+                <div class="price">$18.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+               <div class="product-card">
+                <img src="Images/runningshoes.jpg" alt="runningshoes">
+                <h3>Running Shoes</h3>
+                <p>High-performance Sports Running Shoes – engineered for speed, comfort, and durability.</p>
+                <div class="price">$70.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Images/dufflebag.jpg" alt="dufflebag">
+                <h3>Gym Duffle Bag</h3>
+                <p>Carry your gear in style with our Sports Gym Duffle Bag – built for athletes on the move. Durable.</p>
+                <div class="price">$45.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Images/waterbottle.jpg" alt="waterbottle">
+                <h3>Sports Water Bottle</h3>
+                <p>Stay hydrated in style with our Sports Water Bottle – designed for active lifestyles. </p>
+                <div class="price">$10.00</div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        </section>
+ 
 
+  <!--Testimonial Section-->
+    <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <img src="Images/sarahm.jpg" alt="Sarah M.">
+        <p class="testimonial-text">"The quality of Macky Sports Apparel is unmatched! My new hoodie is so comfortable and stylish."</p>
+        <div class="testimonial-name">— Sarah M.</div>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/jamesk.jpg" alt="James K.">
+        <p class="testimonial-text">"Fast shipping and great customer service. The running shorts are perfect for my daily jogs."</p>
+        <div class="testimonial-name">— James K.</div>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/priyas.jpg" alt="Priya S.">
+        <p class="testimonial-text">"Absolutely love the performance t-shirt. Breathable and fits perfectly!"</p>
+        <div class="testimonial-name">— Priya S.</div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Subscription Section -->
+  <section class="subscribe-section">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates, offers, and new arrivals straight to your inbox.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="subscription">Subscribe</button>
+    </form>
+  </section>
+
+  <!--Footer Section-->
+   <footer>
+        <div class="footer-content">
+            <p style="margin:0;">© 2025 MackySportsApparel. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/MackySportsApparel&quot; target="_blank" aria-label="Facebook">
+                    <img src="Images/fbicon.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/MackySportsApparel&quot; target="_blank" aria-label="Twitter">
+                    <img src="Images/twittericon.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/MackySportsApparel&quot; target="_blank" aria-label="Instagram">
+                    <img src="Images/instagramicon.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+  <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
 </body>
 </html>

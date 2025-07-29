@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .contact-main-section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto 30px auto;
+            display: flex;
+            gap: 40px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(44,62,80,0.13);
+            padding: 0;
+            overflow: hidden;
+        }
+        .contact-map {
+            flex: 1.2;
+            min-width: 320px;
+            min-height: 420px;
+            border: none;
+        }
+        .contact-form-side {
+            flex: 1;
+            padding: 40px 32px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1976d2;
+            font-weight: 700;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: #222;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 12px 10px;
+            border: 1px solid #cfd8dc;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f8fafc;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border: 1.5px solid #1976d2;
+            outline: none;
+            background: #fff;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            padding: 12px 0;
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #1976d2 0%, #43e97b 100%);
+            transform: scale(1.03);
+        }
+        /* Info blocks section */
+        .info-section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .info-block {
+            flex: 1 1 220px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+            padding: 32px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 220px;
+            max-width: 340px;
+        }
+        .info-icon {
+            font-size: 2.2rem;
+            color: #43e97b;
+            margin-bottom: 12px;
+        }
+        .info-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 8px;
+        }
+        .info-detail {
+            font-size: 1.05rem;
+            color: #222;
+            text-align: center;
+            word-break: break-all;
+        }
+        @media (max-width: 900px) {
+            .contact-main-section, .info-section {
+                flex-direction: column;
+                gap: 20px;
+                width: 98%;
+            }
+            .contact-map {
+                min-height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <!--header with logo-->
+    <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="bdycake.jpg" alt="Logo">
+        Macky Sports Apparel
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <!-- Navigation Menu -->
+   <div class="menu" id="menu">
+     <a href="About.html">About</a>
+     <a href="MackyLabel.html">Macky Label</a>
+     <a href="Brands.html">Brands</a>
+     <a href="Gallery.html">Gallery</a>
+     <a href="Testimonials.html">Testimonial</a>
+     <a href="Blogs.html">Blogs</a>
+     <a href="ContactUs.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+    <!-- Main Contact Section: Map + Form -->
+    <div class="contact-main-section">
+        <!-- Left: Google Map -->
+        <iframe 
+            class="contact-map"
+            src="https://www.google.com/maps?q=one%20tower%20bukit%20merah%20connection%20singapore&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bukit Merah Connection One Tower Singapore Location">
+        </iframe>
+        <!-- Right: Contact Form -->
+        <div class="contact-form-side">
+            <div class="contact-title">Contact Us</div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Info Blocks Section -->
+    <div class="info-section">
+        <div class="info-block">
+            <div class="info-icon">&#128222;</div>
+            <div class="info-title">Phone</div>
+            <div class="info-detail">+65 6123 4567</div>
+        </div>
+        <div class="info-block">
+            <div class="info-icon">&#127968;</div>
+            <div class="info-title">Address</div>
+            <div class="info-detail">One Tower, Bukit Merah Connection, Singapore 159835</div>
+        </div>
+        <div class="info-block">
+            <div class="info-icon">&#9993;</div>
+            <div class="info-title">Email</div>
+            <div class="info-detail">info@mackysports.com</div>
+        </div>
+    </div>
+    <script>	
+function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+
+      // Optional: Adjust banner position based on menu state
+      const banner = document.getElementById('banner');
+      if (menu.classList.contains('active')) {
+        banner.style.marginTop = menu.offsetHeight + 'px';
+      } else {
+        banner.style.marginTop = '0px';
+      }
+    }
+    </script>
+</body>
+</html>
